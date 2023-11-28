@@ -1,0 +1,44 @@
+.link {
+    cursor: pointer;
+}
+
+.burger {
+    width: 20px;
+    height: 16px;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.line {
+    width: 100%;
+    height: 2px;
+    background-color: var(--textColor);
+}
+
+.mobMenu {
+    padding: 25px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    font-size: 40px;
+    width: 100%;
+    height: calc(100vh - 75px);
+    background-color: var(--bg);
+    position: absolute;
+    left: 0;
+    top: 60px;
+}
+
+@media screen and (max-width: 640px) {
+    .link {
+        display: none;
+    }
+
+    .burger {
+        display: flex;
+    }
+}

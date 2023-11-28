@@ -1,0 +1,106 @@
+.container {
+    margin-top: 30px;
+}
+
+.title {
+    font-size: 72px;
+    font-weight: 300;
+}
+
+.post {
+    display: flex;
+    gap: 50px;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.imgContainer {
+    flex: 1;
+    height: 350px;
+    position: relative;
+}
+
+.image {
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.txtContainer {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.postTitle {
+    font-weight: 700;
+}
+
+.postDesc {
+    font-weight: 300;
+    color: var(--softTextColor);
+}
+
+.postBtn {
+    border-radius: 10px;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    width: max-content;
+}
+
+@media screen and (max-width: 1240px) {
+    .title {
+        font-size: 50px;
+    }
+
+    .postTitle {
+        font-size: 25px;
+    }
+
+    .imgContainer {
+        height: 300px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .title {
+        font-size: 40px;
+    }
+
+    .postTitle {
+        font-size: 20px;
+    }
+
+    .imgContainer {
+        height: 250px;
+    }
+
+    .postDesc {
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .title {
+        font-size: 45px;
+    }
+
+    .postTitle {
+        font-size: 24px;
+    }
+
+    .imgContainer {
+        display: none;
+    }
+
+    .postDesc {
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .title {
+        font-size: 32px;
+    }
+}
