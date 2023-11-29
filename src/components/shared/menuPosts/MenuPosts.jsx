@@ -3,7 +3,7 @@ import styles from './menuPosts.module.css'
 import Link from 'next/link'
 
 const getData = async (page) => {
-  const res = await fetch(`http://localhost:3000/api/posts?page=${page}`, {
+  const res = await fetch(`${process.env.NEXT_PUBLIC_URL}/api/posts?page=${page}`, {
     cache: 'no-store'
   })
 

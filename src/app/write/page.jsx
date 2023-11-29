@@ -9,6 +9,7 @@ import { useSession } from "next-auth/react";
 import { app } from "@/utils/firebase";
 import { getStorage, ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
 import useSWR from "swr";
+import dynamic from "next/dynamic";
 
 const fetcher = async (url) => {
     const res = await fetch(url)
@@ -29,7 +30,8 @@ const Page = () => {
     const {status} = useSession()
     const router = useRouter()
 
-    const {data} = useSWR('http://localhost:3000/api/categories', fetcher)
+    const {data} = useSWR(`${process.env.NEXT_PUBLIC_URL}/api/categories`, fetcher)
+    console.log(data)
 
     useEffect(() => {
         const storage = getStorage(app);
