@@ -17,7 +17,7 @@ const fetcher = async (url) => {
 const Comments = ({postSlug}) => {
   const {status} = useSession()
 
-  const {data, mutate, isLoading} = useSWR(`${process.env.NEXT_PUBLIC_URL}/api/comments?postSlug=${postSlug}`, fetcher)
+  const {data, mutate, isLoading} = useSWR(`${process.env.NEXT_PUBLIC_API_URL}/api/comments?postSlug=${postSlug}`, fetcher)
   
   const [comment, setComment] = useState('')
 

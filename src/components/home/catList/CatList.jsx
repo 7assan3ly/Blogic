@@ -3,7 +3,7 @@ import styles from './catList.module.css'
 import Image from 'next/image'
 
 const getData = async () => {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_URL}/api/categories`, {
+  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/categories`, {
     cache: 'no-store'
   })
 

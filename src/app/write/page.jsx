@@ -30,7 +30,7 @@ const Page = () => {
     const {status} = useSession()
     const router = useRouter()
 
-    const {data} = useSWR(`${process.env.NEXT_PUBLIC_URL}/api/categories`, fetcher)
+    const {data} = useSWR(`${process.env.NEXT_PUBLIC_API_URL}/api/categories`, fetcher)
     console.log(data)
 
     useEffect(() => {
