@@ -38,10 +38,11 @@
     font-size: 25px;
 }
 
-.postDesc {
+.postDesc, .postDesc > * {
     font-size: 14px;
     font-weight: 300;
     color: var(--softTextColor);
+    text-decoration: none;
 }
 
 .postBtn {

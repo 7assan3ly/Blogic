@@ -24,9 +24,7 @@ const Card = ({post}) => {
             {post.title}
           </h1>
         </Link>
-        <p className={styles.postDesc}>
-          {post.desc}
-        </p>
+        <p className={styles.postDesc} dangerouslySetInnerHTML={{ __html: post?.desc }} />
         <Link href={`/posts/${post.slug}`} className={styles.postBtn}>Read More</Link>
       </div>
     </div>
